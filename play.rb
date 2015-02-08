@@ -33,15 +33,17 @@ while continue
 		break
 	elsif item == 'show'
 		puts my_ship
-	end
-	my_value = my_ship.send(item)
-	cpu_value = cpu_ship.send(item)
-	puts "You have #{my_value}, computer has #{cpu_value}"
-	if my_value > cpu_value
-		puts 'Player wins'
 	else
-		puts 'Computer wins'
+		my_value = my_ship.send(item)
+		cpu_value = cpu_ship.send(item)
+		puts "You have #{my_value}, computer has #{cpu_value}"
+		if my_value > cpu_value
+			puts 'Player wins'
+		else
+			puts 'Computer wins'
+		end
 	end
+
 end
 
 
